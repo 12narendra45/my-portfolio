@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Venkata Narendra, Software Developer and MERN Stack Mentor working with React.js, Node.js, Express.js, React Native and MongoDB."
+    />
+    <meta name="theme-color" content="#090b10" />
+    <title>Venkata Narendra Chakka | Software Developer & MERN Stack Mentor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor cursor-dot"></div>
+    <div class="cursor cursor-ring"></div>
+
+    <div class="loader" aria-live="polite">
+      <div class="loader-inner">
+        <span class="loader-tag">Welcome</span>
+        <span class="loader-mark">CVN</span>
+        <p>To My Portfolio</p>
+      </div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a href="#home" class="brand" aria-label="Home">
+          <span>CVN</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-background" aria-hidden="true">
+          <div class="grid-layer"></div>
+          <div class="glow glow-one"></div>
+          <div class="glow glow-two"></div>
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+          <div class="orb orb-three"></div>
+          <div class="particle particle-1"></div>
+          <div class="particle particle-2"></div>
+          <div class="particle particle-3"></div>
+          <div class="particle particle-4"></div>
+          <div class="particle particle-5"></div>
+        </div>
+
+        <div class="container hero-content">
+          <div class="hero-copy reveal reveal-up">
+            <p class="eyebrow">Hello, I'm</p>
+            <h1 class="hero-name" aria-label="Venkata Narendra Chakka">
+              <span class="name-line">VENKATA</span>
+              <span class="name-line">NARENDRA</span>
+             
+            </h1>
+
+            <div class="role-block" aria-live="polite">
+              <span class="role-prefix">I'M A</span>
+              <span class="role-text" id="roleText"></span>
+            </div>
+
+            <div class="tech-stack" aria-label="Technology stack">
+              <span class="tech-pill"><i class="fa-brands fa-react"></i> React.js</span>
+              <span class="tech-pill"><i class="fa-brands fa-node-js"></i> Node.js</span>
+              <span class="tech-pill"><i class="fa-solid fa-server"></i> Express.js</span>
+              <span class="tech-pill"><i class="fa-solid fa-database"></i> MongoDB</span>
+              <span class="tech-pill"><i class="fa-brands fa-square-js"></i> JavaScript</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#projects" class="button primary">
+                <span>VIEW MY WORK</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="assets/resume/Venkata_narendra_Resume.pdf" class="button secondary" download>
+                <span>DOWNLOAD RESUME</span>
+                <i class="fa-solid fa-download"></i>
+              </a>
+            </div>
+
+            <div class="social-stack" aria-label="Social links">
+              <a href="https://github.com" target="_blank" rel="noreferrer" class="social-link" data-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="social-link" data-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:narendrachakka33@gmail.com" class="social-link" data-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-panel reveal reveal-right">
+            <div class="glass-board">
+              <div class="board-topbar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="board-content">
+                <div class="board-header">
+                  <span class="badge live">LIVE</span>
+                  <span class="badge stack">FULL-STACK</span>
+                </div>
+
+                <div class="terminal-row"><span class="prompt">$</span> whoami</div>
+                <div class="terminal-row line-strong">Venkata Narendra Chakka</div>
+                <div class="terminal-row"><span class="prompt">$</span> role</div>
+                <div class="terminal-row line-strong">Software Developer & MERN Stack Mentor</div>
+                <div class="terminal-row"><span class="prompt">$</span> stack</div>
+                <div class="terminal-row stack-list">
+                  <span>React.js</span>
+                  <span>Node.js</span>
+                  <span>Express.js</span>
+                  <span>MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container">
+          <div class="section-heading reveal reveal-up">
+            <span class="section-label">ABOUT</span>
+            <h2>BUILDING<br />DIGITAL<br />EXPERIENCES.</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-panel reveal reveal-left">
+              <div class="terminal-window">
+                <div class="terminal-bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="terminal-body">
+                  <div class="terminal-line"><span class="prompt">$</span> whoami</div>
+                  <div class="terminal-line typed-line">Venkata Narendra Chakka</div>
+                  <div class="terminal-line"><span class="prompt">$</span> role</div>
+                  <div class="terminal-line typed-line">Software Developer & MERN Stack Mentor</div>
+                  <div class="terminal-line"><span class="prompt">$</span> stack</div>
+                  <div class="terminal-line stack-grid">
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>MongoDB</span>
+                  </div>
+                  <span class="cursor-blink"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-copy reveal reveal-right">
+              <p>
+                I'm a Software Developer and MERN Stack Mentor, currently working at Innoknowvex,
+                with experience building full-stack applications and helping learners grow in
+                React.js, Node.js, Express.js, React Native and MongoDB.
+              </p>
+
+              <div class="mini-metrics">
+                <div class="metric-card">
+                  <strong>2+</strong>
+                  <span>Years learning & building</span>
+                </div>
+                <div class="metric-card">
+                  <strong>5+</strong>
+                  <span>Core technologies</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills">
+        <div class="container">
+          <div class="section-heading center reveal reveal-up">
+            <span class="section-label">TECH STACK</span>
+            <h2>Tools I use to build applications</h2>
+          </div>
+
+          <div class="skills-showcase reveal reveal-up">
+            <div class="skill-categories" id="skillCategories">
+              <button class="skill-category active" data-index="0">
+                <span>Frontend</span>
+              </button>
+              <button class="skill-category" data-index="1">
+                <span>Backend</span>
+              </button>
+              <button class="skill-category" data-index="2">
+                <span>Database</span>
+              </button>
+              <button class="skill-category" data-index="3">
+                <span>Tools</span>
+              </button>
+            </div>
+
+            <div class="skill-panel" id="skillPanel">
+              <div class="skill-panel-header">
+                <span class="panel-tag">Frontend</span>
+                <span class="panel-dot"></span>
+              </div>
+              <div class="skill-items">
+                <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-html5"></i></span><span>HTML</span></div>
+                <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-css3-alt"></i></span><span>CSS</span></div>
+                <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-react"></i></span><span>React.js</span></div>
+                <div class="skill-item"><span class="skill-icon"><i class="fa-solid fa-mobile-screen-button"></i></span><span>React Native</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience">
+        <div class="container">
+          <div class="section-heading reveal reveal-up">
+            <span class="section-label">EXPERIENCE</span>
+            <h2>Driving product and engineering work</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <article class="timeline-item reveal reveal-left" data-year="2025">
+              <div class="timeline-year">2025</div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div class="company-mark">
+                    <img src="assets/company/innoknowvex-logo.png" alt="Innoknowvex logo" />
+                  </div>
+                  <span class="timeline-badge">Intern</span>
+                </div>
+                <h3>WEB DEVELOPMENT INTERN</h3>
+                <p class="duration">December 2025 – May 2026</p>
+                <ul>
+                  <li>Assisted in developing full-stack applications using Node.js, Express.js, React.js, and React Native.</li>
+                  <li>Contributed to LMS and Attendance Management System development.</li>
+                  <li>Implemented frontend features and integrated backend APIs.</li>
+                  <li>Tested, debugged, and maintained application functionality.</li>
+                </ul>
+                <div class="tech-badges">
+                  <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+                  <span><i class="fa-solid fa-server"></i> Express.js</span>
+                  <span><i class="fa-brands fa-react"></i> React.js</span>
+                  <span><i class="fa-solid fa-mobile-screen-button"></i> React Native</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal reveal-right" data-year="2026">
+              <div class="timeline-year">2026</div>
+              <div class="timeline-card current-card">
+                <div class="timeline-header">
+                  <div class="company-mark">
+                    <img src="assets/company/innoknowvex-logo.png" alt="Innoknowvex logo" />
+                  </div>
+                  <span class="timeline-badge current">Current</span>
+                </div>
+                <h3>SOFTWARE DEVELOPER</h3>
+                <p class="duration">June 2026 – Present</p>
+                <ul>
+                  <li>Developed full-stack applications using Node.js, Express.js, React.js, and React Native.</li>
+                  <li>Built and enhanced internal LMS and Certificate Verification page.</li>
+                  <li>Designed and integrated RESTful APIs with responsive frontend components.</li>
+                  <li>Optimized application performance, fixed bugs, and managed code using Git.</li>
+                </ul>
+                <div class="tech-badges">
+                  <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+                  <span><i class="fa-solid fa-server"></i> Express.js</span>
+                  <span><i class="fa-brands fa-react"></i> React.js</span>
+                  <span><i class="fa-solid fa-mobile-screen-button"></i> React Native</span>
+                  <span><i class="fa-brands fa-git-alt"></i> Git</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects">
+        <div class="container">
+          <div class="section-heading reveal reveal-up">
+            <span class="section-label">PROJECTS</span>
+            <h2>Builds that combine product thinking and engineering</h2>
+          </div>
+
+          <article class="project-showcase project-left reveal reveal-left">
+            <div class="project-visual project-visual-one">
+              <div class="mockup-window">
+                <div class="mockup-header">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="mockup-body">
+                  <aside class="mock-sidebar">
+                    <span>Overview</span>
+                    <span>Attendance</span>
+                    <span>Admin</span>
+                  </aside>
+                  <div class="mock-content">
+                    <div class="mock-chart"></div>
+                    <div class="mock-cards">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-copy">
+              <span class="project-kicker">PROJECT 01</span>
+              <h3>ATTENDANCE<br />MANAGEMENT<br />SYSTEM</h3>
+              <p>
+                A full-stack attendance platform built to streamline tracking, administrative operations,
+                and secure access across teams.
+              </p>
+              <div class="project-tech">
+                <span><i class="fa-brands fa-react"></i> React.js</span>
+                <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+                <span><i class="fa-solid fa-server"></i> Express.js</span>
+                <span><i class="fa-solid fa-database"></i> MongoDB</span>
+                <span><i class="fa-solid fa-code"></i> REST APIs</span>
+              </div>
+              <div class="feature-list">
+                <span>Authentication</span>
+                <span>Attendance Tracking</span>
+                <span>Admin Dashboard</span>
+                <span>REST APIs</span>
+                <span>MongoDB</span>
+                <span>Responsive UI</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="button primary small">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="button secondary small">GITHUB <i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-showcase project-right reveal reveal-right">
+            <div class="project-copy">
+              <span class="project-kicker">PROJECT 02</span>
+              <h3>RESTAURANT<br />FOOD ORDERING</h3>
+              <p>
+                A responsive ordering experience focused on quick selection, cart updates, automatic payment
+                logic, and a large menu catalog.
+              </p>
+              <div class="project-tech">
+                <span><i class="fa-brands fa-react"></i> React.js</span>
+                <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                <span><i class="fa-brands fa-html5"></i> HTML</span>
+                <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                <span><i class="fa-brands fa-js-square"></i> JavaScript</span>
+              </div>
+              <div class="feature-list">
+                <span>Table Selection</span>
+                <span>Food Ordering</span>
+                <span>Interactive Cart</span>
+                <span>Add / Update / Remove</span>
+                <span>Auto Payment Calculation</span>
+                <span>100+ Menu Items</span>
+                <span>Responsive UI</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="button primary small">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="button secondary small">GITHUB <i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+
+            <div class="project-visual project-visual-two">
+              <div class="restaurant-mockup">
+                <div class="restaurant-topbar">
+                  <span class="table-pill">Table 04</span>
+                  <span class="cart-pill">Cart 3</span>
+                </div>
+                <div class="menu-grid">
+                  <div class="meal-card">
+                    <div class="meal-thumb purple"></div>
+                    <h4>Paneer Bowl</h4>
+                    <p>₹299</p>
+                  </div>
+                  <div class="meal-card">
+                    <div class="meal-thumb orange"></div>
+                    <h4>Chicken Roll</h4>
+                    <p>₹249</p>
+                  </div>
+                  <div class="meal-card">
+                    <div class="meal-thumb green"></div>
+                    <h4>Salad Mix</h4>
+                    <p>₹189</p>
+                  </div>
+                  <div class="meal-card">
+                    <div class="meal-thumb gold"></div>
+                    <h4>Chocolate Shake</h4>
+                    <p>₹160</p>
+                  </div>
+                </div>
+                <div class="checkout-box">
+                  <span>Subtotal</span>
+                  <strong>₹1,089</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="section education">
+        <div class="container">
+          <div class="section-heading reveal reveal-up">
+            <span class="section-label">EDUCATION</span>
+            <h2>Academic foundation and continuous learning</h2>
+          </div>
+
+          <div class="edu-journey reveal reveal-up">
+            <article class="edu-step reveal reveal-up">
+              <div class="edu-step-node">
+                <span class="edu-step-year">2019-2020</span>
+                <span class="edu-step-icon sch">
+                  <img src="assets/education/sri.png" alt="Sri Chaitanya High School logo" />
+                </span>
+              </div>
+              <div class="edu-step-content">
+                <span class="edu-step-badge">SSC</span>
+                <h3>Sri Chaitanya High School</h3>
+                <p>Secondary School Certificate</p>
+                <div class="edu-step-meta">
+                  <span>CGPA: 10.00</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="edu-step reveal reveal-up">
+              <div class="edu-step-node">
+                <span class="edu-step-year">2020-2023</span>
+                <span class="edu-step-icon sjp">
+                  <img src="assets/education/jyothi.png" alt="Sri Jyothi Polytechnic College logo" />
+                </span>
+              </div>
+              <div class="edu-step-content">
+                <span class="edu-step-badge">Diploma</span>
+                <h3>Sri Jyothi Polytechnic College</h3>
+                <p>Diploma — Computer Engineering</p>
+                <div class="edu-step-meta">
+                  <span>94%</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="edu-step reveal reveal-up">
+              <div class="edu-step-node">
+                <span class="edu-step-year">2023-2026</span>
+                <span class="edu-step-icon lpu">
+                  <img src="assets/education/lpu.png" alt="Lovely Professional University logo" />
+                </span>
+              </div>
+              <div class="edu-step-content">
+                <span class="edu-step-badge">B.Tech</span>
+                <h3>Lovely Professional University</h3>
+                <p>B.Tech — Computer Science and Engineering</p>
+                <div class="edu-step-meta">
+                  <span>CGPA: 8.32</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section building-workspace">
+        <div class="container">
+          <div class="workspace-header reveal reveal-up">
+            <span class="section-label">WHAT I'M BUILDING</span>
+            <h2>Shipping full-stack experiences</h2>
+          </div>
+
+          <div class="workspace-window reveal reveal-up">
+            <div class="workspace-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="workspace-body">
+              <aside class="workspace-sidebar">
+                <span>Frontend</span>
+                <span>Backend</span>
+                <span>Database</span>
+                <span>API</span>
+              </aside>
+              <div class="workspace-editor">
+                <div class="code-line"><span class="token-keyword">const</span> <span class="token-var">stack</span> = [</div>
+                <div class="code-line indent-1">"React.js",</div>
+                <div class="code-line indent-1">"Node.js",</div>
+                <div class="code-line indent-1">"Express.js",</div>
+                <div class="code-line indent-1">"MongoDB"</div>
+                <div class="code-line">];</div>
+                <div class="code-line"><span class="token-keyword">function</span> <span class="token-var">buildExperience</span>() {</div>
+                <div class="code-line indent-1">return "Full-stack products";</div>
+                <div class="code-line">}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section journey-section">
+        <div class="container">
+          <div class="section-heading reveal reveal-up">
+            <span class="section-label">CAREER JOURNEY</span>
+            <h2>Progressing from learning to building</h2>
+          </div>
+
+          <div class="journey-timeline reveal reveal-up">
+            <div class="journey-item">
+              <span class="year">2020</span>
+              <div class="journey-card">
+                <strong>Diploma journey</strong>
+              </div>
+            </div>
+            <div class="journey-item">
+              <span class="year">2023</span>
+              <div class="journey-card">
+                <strong>B.Tech</strong>
+              </div>
+            </div>
+            <div class="journey-item">
+              <span class="year">2025</span>
+              <div class="journey-card">
+                <strong>Web Development Intern</strong>
+              </div>
+            </div>
+            <div class="journey-item">
+              <span class="year">2026</span>
+              <div class="journey-card">
+                <strong>Software Developer</strong>
+                <small>also MERN Stack Mentor</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container contact-shell reveal reveal-up">
+          <div class="contact-copy">
+            <span class="section-label">CONTACT</span>
+            <h2>LET'S BUILD SOMETHING.</h2>
+            <p>Have an opportunity or project in mind? Let's connect.</p>
+
+            <div class="contact-cards">
+              <a href="mailto:narendrachakka33@gmail.com" class="contact-card" data-label="narendrachakka33@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="contact-card">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noreferrer" class="contact-card">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="tel:+919390306818" class="contact-card" data-label="+91 93903 06818">
+                <i class="fa-solid fa-phone"></i>
+                <span>Phone</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" action="mailto:narendrachakka33@gmail.com" method="post" enctype="text/plain">
+            <div class="field-group">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" />
+            </div>
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="your@email.com" />
+            </div>
+            <div class="field-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project"></textarea>
+            </div>
+            <button type="submit" class="button primary full-width">
+              <span>SEND MESSAGE</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <h3>Venkata Narendra Chakka</h3>
+          <p>Software Developer & MERN Stack Mentor</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:narendrachakka33@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 Venkata Narendra Chakka</span>
+        <button class="back-to-top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
