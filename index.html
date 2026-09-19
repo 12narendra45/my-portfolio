@@ -335,11 +335,14 @@
                     <span>Admin</span>
                   </aside>
                   <div class="mock-content">
-                    <div class="mock-chart"></div>
+                    <div class="mock-chart">
+                      <span class="stat-label">Monthly Attendance</span>
+                      <span class="stat-value">1,248</span>
+                    </div>
                     <div class="mock-cards">
-                      <div></div>
-                      <div></div>
-                      <div></div>
+                      <div data-label="Present" data-value="1,248"></div>
+                      <div data-label="Absent" data-value="32"></div>
+                      <div data-label="Late" data-value="14"></div>
                     </div>
                   </div>
                 </div>
@@ -369,8 +372,8 @@
                 <span>Responsive UI</span>
               </div>
               <div class="project-actions">
-                <a href="#" class="button primary small">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#" class="button secondary small">GITHUB <i class="fa-brands fa-github"></i></a>
+                <a href="#attendance-video" class="button primary small video-project-trigger">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://github.com/12narendra45/Attendance_System" target="_blank" rel="noreferrer" class="button secondary small">GITHUB <i class="fa-brands fa-github"></i></a>
               </div>
             </div>
           </article>
@@ -400,8 +403,8 @@
                 <span>Responsive UI</span>
               </div>
               <div class="project-actions">
-                <a href="#" class="button primary small">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#" class="button secondary small">GITHUB <i class="fa-brands fa-github"></i></a>
+                <a href="https://food-ordering-web-app-ivory.vercel.app/" target="_blank" rel="noreferrer" class="button primary small">VIEW PROJECT <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://github.com/12narendra45/food-ordering-web-app" target="_blank" rel="noreferrer" class="button secondary small">GITHUB <i class="fa-brands fa-github"></i></a>
               </div>
             </div>
 
@@ -605,7 +608,7 @@
             </div>
           </div>
 
-          <form class="contact-form" action="mailto:narendrachakka33@gmail.com" method="post" enctype="text/plain">
+          <form class="contact-form" data-google-sheet-endpoint="https://script.google.com/macros/s/AKfycbwRxRsSOnyVQLpv-42xLQZ3xglK3ZiuMtbl79K6ArnOPozvklMeCpBPuCmyk_-0yON1HA/exec">
             <div class="field-group">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" placeholder="Your name" />
@@ -622,6 +625,7 @@
               <span>SEND MESSAGE</span>
               <i class="fa-solid fa-arrow-right"></i>
             </button>
+            <p class="form-status" aria-live="polite"></p>
           </form>
         </div>
       </section>
@@ -648,6 +652,22 @@
         </button>
       </div>
     </footer>
+
+    <div class="video-modal" id="attendance-video" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="attendance-video-title">
+      <div class="video-modal-backdrop" data-video-close></div>
+      <div class="video-modal-panel">
+        <div class="video-modal-header">
+          <h2 id="attendance-video-title">Attendance Management System</h2>
+          <button type="button" class="video-modal-close" data-video-close aria-label="Close attendance video">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <video class="attendance-video" controls playsinline preload="metadata">
+          <source src="assets/resume/attendance.mp4" type="video/mp4" />
+          Your browser does not support video playback.
+        </video>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

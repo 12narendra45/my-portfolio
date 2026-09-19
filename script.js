@@ -246,6 +246,37 @@ function initProjectTilt() {
   });
 }
 
+function initProjectLinks() {
+  const trigger = document.querySelector('.video-project-trigger');
+  const modal = document.getElementById('attendance-video');
+  const video = modal?.querySelector('.attendance-video');
+  const closeButtons = modal?.querySelectorAll('[data-video-close]');
+
+  if (!trigger || !modal || !video || !closeButtons?.length) return;
+
+  const closeVideo = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('video-modal-open');
+    video.pause();
+    video.currentTime = 0;
+  };
+
+  trigger.addEventListener('click', (event) => {
+    event.preventDefault();
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('video-modal-open');
+    video.currentTime = 0;
+    video.play().catch(() => {});
+  });
+
+  closeButtons.forEach((button) => button.addEventListener('click', closeVideo));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('open')) closeVideo();
+  });
+}
+
 function handleBackToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -272,14 +303,56 @@ function initFormSubmit() {
   const form = document.querySelector('.contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', (event) => {
+  const submitButton = form.querySelector('button[type="submit"]');
+  const submitLabel = submitButton?.querySelector('span');
+  const status = form.querySelector('.form-status');
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
+    const endpoint = form.dataset.googleSheetEndpoint;
 
     if (!name || !email || !message) {
-      event.preventDefault();
-      alert('Please fill in your name, email, and message before sending.');
+      if (status) status.textContent = 'Please fill in your name, email, and message.';
+      return;
+    }
+
+    if (!endpoint || endpoint.includes('PASTE_YOUR_')) {
+      if (status) status.textContent = 'Add your Google Apps Script web app URL before sending.';
+      return;
+    }
+
+    if (submitButton) submitButton.disabled = true;
+    if (submitLabel) submitLabel.textContent = 'SENDING...';
+    if (status) status.textContent = 'Sending your message...';
+
+    try {
+      const request = fetch(endpoint, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      const timeout = new Promise((resolve) => {
+        window.setTimeout(() => resolve(null), 8000);
+      });
+      const response = await Promise.race([request, timeout]);
+
+      if (response && response.type !== 'opaque' && !response.ok) {
+        throw new Error('The form submission failed.');
+      }
+
+      form.reset();
+      if (status) status.textContent = 'Message sent successfully.';
+    } catch (error) {
+      if (status) status.textContent = 'Unable to send right now. Please try again or email directly.';
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+      if (submitLabel) submitLabel.textContent = 'SEND MESSAGE';
     }
   });
 }
@@ -305,6 +378,7 @@ initFormSubmit();
 initCustomCursor();
 initSkillRotator();
 initProjectTilt();
+initProjectLinks();
 
 window.addEventListener('scroll', () => {
   updateHeaderState();

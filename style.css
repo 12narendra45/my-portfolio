@@ -1134,30 +1134,32 @@ textarea {
   perspective: 1200px;
 }
 
+
 .mockup-window {
-  width: min(100%, 430px);
-  min-height: 220px;
+  width: min(100%, 480px);
+  min-height: 260px;
   border-radius: 18px;
-  background: rgba(12,16,22,0.9);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(180deg, rgba(8,10,14,0.96), rgba(14,18,22,0.98));
+  border: 1px solid rgba(255,255,255,0.06);
   overflow: hidden;
-  box-shadow: 0 18px 50px rgba(0,0,0,0.32);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.02);
   transform-style: preserve-3d;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.28s cubic-bezier(.2,.9,.3,1), box-shadow 0.28s ease;
 }
 
 .project-showcase:hover .mockup-window,
 .project-showcase:hover .restaurant-mockup {
-  transform: rotateX(8deg) rotateY(-8deg) scale(1.02);
-  box-shadow: 0 28px 60px rgba(125, 211, 252, 0.12);
+  transform: rotateX(6deg) rotateY(-6deg) scale(1.03);
+  box-shadow: 0 36px 80px rgba(0,0,0,0.55);
 }
 
 .mockup-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   padding: 12px 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
 .mockup-header span {
@@ -1193,35 +1195,86 @@ textarea {
   padding: 18px;
 }
 
+
 .mock-chart {
-  height: 120px;
-  border-radius: 16px;
-  background: linear-gradient(180deg, rgba(255, 138, 106, 0.2), rgba(255, 138, 106, 0.03));
+  height: 140px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(6,10,14,0.9), rgba(12,16,20,0.95));
   position: relative;
   overflow: hidden;
+  padding: 14px;
+  display: grid;
+  align-items: end;
 }
 
 .mock-chart::before {
+  /* decorative sparkline bars using gradients */
   content: "";
   position: absolute;
-  inset: auto 10% 20px 10%;
-  height: 48%;
-  background: linear-gradient(135deg, rgba(255,138,106,0.25), transparent);
-  clip-path: polygon(0% 100%, 20% 48%, 35% 68%, 55% 22%, 68% 42%, 100% 0%, 100% 100%);
+  left: 10px;
+  right: 10px;
+  bottom: 16px;
+  height: 56%;
+  background-image: linear-gradient(90deg,
+    rgba(0,0,0,0) 0 0%,
+    rgba(255,138,106,0.85) 0%),
+    repeating-linear-gradient(90deg,
+      rgba(255,255,255,0.08) 0 8px,
+      rgba(255,255,255,0.02) 8px 28px);
+  opacity: 0.9;
+  filter: blur(6px) saturate(120%);
+  transform: translateY(6px) skewY(-3deg);
 }
+
+.mock-chart .stat-label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  color: var(--soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+
+.mock-chart .stat-value {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-weight: 800;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
 
 .mock-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .mock-cards div {
-  height: 70px;
-  border-radius: 14px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.06);
+  height: 76px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.mock-cards div::before {
+  content: attr(data-label);
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.mock-cards div::after {
+  content: attr(data-value);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.98rem;
 }
 
 .project-copy {
@@ -1291,6 +1344,85 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.video-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.video-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 6, 10, 0.86);
+  backdrop-filter: blur(12px);
+}
+
+.video-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 900px);
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  background: #0b0f15;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.5);
+  transform: translateY(16px) scale(0.98);
+  transition: transform 0.25s ease;
+}
+
+.video-modal.open .video-modal-panel {
+  transform: translateY(0) scale(1);
+}
+
+.video-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.video-modal-header h2 {
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.video-modal-close {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.attendance-video {
+  display: block;
+  width: 100%;
+  max-height: 72vh;
+  border-radius: 12px;
+  background: #05070a;
+}
+
+body.video-modal-open {
+  overflow: hidden;
 }
 
 .restaurant-mockup {
@@ -1851,6 +1983,18 @@ textarea {
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 24px;
   padding: 22px;
+}
+
+.contact-form button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.form-status {
+  min-height: 1.2em;
+  margin-top: 12px;
+  color: var(--soft);
+  font-size: 0.78rem;
 }
 
 .field-group {
